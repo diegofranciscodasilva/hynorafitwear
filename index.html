@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYNORA FITWEAR — Vista Sua Essência</title>
+    <meta name="description" content="Performance bruta e estética urbana impecável. Coleção Origin da Hynora Fitwear.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=block">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header" id="header">
+        <div class="header__inner container">
+            <a href="#inicio" class="logo">HYNORA</a>
+
+            <nav class="nav" id="mainNav">
+                <ul class="nav__list">
+                    <li><a href="#inicio" class="nav__link" data-nav-link data-section="inicio">Início</a></li>
+                    <li><a href="#sobre" class="nav__link" data-nav-link data-section="sobre">Sobre</a></li>
+                    <li><a href="#colecao" class="nav__link" data-nav-link data-section="colecao">Coleção</a></li>
+                    <li><a href="#beneficios" class="nav__link" data-nav-link data-section="beneficios">Benefícios</a>
+                    </li>
+                    <li><a href="#faq" class="nav__link" data-nav-link data-section="faq">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <a href="#" class="btn btn--primary btn--sm header__cta">Contato</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menu mobile (overlay) -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav__list">
+            <li><a href="#inicio" class="mobile-nav__link" data-nav-link data-section="inicio">Início</a></li>
+            <li><a href="#sobre" class="mobile-nav__link" data-nav-link data-section="sobre">Sobre</a></li>
+            <li><a href="#colecao" class="mobile-nav__link" data-nav-link data-section="colecao">Coleção</a></li>
+            <li><a href="#beneficios" class="mobile-nav__link" data-nav-link data-section="beneficios">Benefícios</a>
+            </li>
+            <li><a href="#faq" class="mobile-nav__link" data-nav-link data-section="faq">FAQ</a></li>
+        </ul>
+        <a href="#" class="btn btn--primary mobile-nav__cta">Contato</a>
+    </div>
+
+    <main>
+
+        <!-- ===================== HERO ===================== -->
+        <section class="hero" id="inicio">
+            <div class="container hero__grid">
+
+                <div class="hero__content">
+                    <span class="tag-dot">COLEÇÃO EXCLUSIVA // ED. LIMITADA</span>
+                    <span class="label-sys">[ HYNORA SYSTEM 01 ]</span>
+
+                    <h1 class="hero__title">VISTA SUA<br>ESSÊNCIA</h1>
+
+                    <p class="hero__desc">
+                        Performance bruta e estética urbana impecável. A intersecção perfeita
+                        entre o design de vanguarda e a funcionalidade extrema para quem não aceita limites.
+                    </p>
+
+                    <div class="stat-row">
+                        <div class="stat-row__item">
+                            <span class="stat-row__label">MECÂNICA</span>
+                            <span class="stat-row__value">CINÉTICA PURA</span>
+                        </div>
+                        <div class="stat-row__item">
+                            <span class="stat-row__label">CONFORTO</span>
+                            <span class="stat-row__value">ZERO ATRITO</span>
+                        </div>
+                        <div class="stat-row__item">
+                            <span class="stat-row__label">TECNOLOGIA</span>
+                            <span class="stat-row__value">HIGH COMPRESS</span>
+                        </div>
+                    </div>
+
+                    <div class="hero__actions">
+                        <a href="#colecao" class="btn btn--primary">
+                            EXPLORAR COLEÇÃO
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                        <a href="#sobre" class="btn btn--outline">
+                            Ver Manifesto
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__media">
+                    <div class="hero__media-frame">
+                        <span class="frame-label frame-label--top">SYS.FRAME // 1078x1303</span>
+
+                        <img src="./assets/images/homefoto.jpg"
+                            alt="Modelo Hynora Fitwear em treino com vestuário de alta performance" class="hero__img"
+                            loading="eager">
+
+                        <span class="frame-label frame-label--bottom-left">SYS.LOC // 48.8566</span>
+
+                        <span class="chip chip--active">LANÇAMENTO ATIVO</span>
+                    </div>
+
+                    <div class="biometric-card biometric-card--bpm">
+                        <span class="biometric-card__label">BIOMETRICS</span>
+                        <span class="biometric-card__value">BPM: 145 • OX: 98%</span>
+                    </div>
+
+                    <div class="biometric-card biometric-card--temp">
+                        <span class="biometric-card__label">ORIGIN FIT</span>
+                        <span class="biometric-card__value">TEMP: 37.2°C</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ===================== MANIFESTO ===================== -->
+        <section class="manifesto" id="sobre">
+            <div class="container manifesto__grid">
+
+                <div class="manifesto__media">
+                    <img src="./assets/images/aboutfoto.jpg" alt="Modelo Hynora Fitwear posando com vestuário de treino"
+                        class="manifesto__img" loading="lazy">
+                    <div class="manifesto__accent" aria-hidden="true"></div>
+                </div>
+
+                <div class="manifesto__text">
+                    <span class="section-label">O Manifesto</span>
+                    <h2 class="headline-md">A Hynora Fitwear</h2>
+
+                    <p class="body-lg">
+                        Nós rejeitamos o ornamento. Rejeitamos o ruído visual. Na Hynora, acreditamos
+                        que a verdadeira performance exige clareza absoluta. Cada costura, cada painel
+                        de tecido é projetado com propósito singular: potencializar o seu movimento.
+                    </p>
+
+                    <p class="body-lg">
+                        Nossa estética é a da <span class="strong">Cinética Minimalista</span> — agressiva, estruturada
+                        e implacavelmente precisa. Criamos para aqueles que encaram o treino não como um
+                        hobby, mas como um ritual de lapidação pessoal.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Faixa de destaque -->
+        <section class="highlight-band">
+            <h2 class="highlight-band__title">
+                MOVIMENTO EM <em class="highlight-band__accent">Estado Puro.</em>
+            </h2>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ===================== COLEÇÃO ORIGIN ===================== -->
+        <section class="collection" id="colecao">
+            <div class="container">
+                <h2 class="section-title section-title--accent">Coleção Origin</h2>
+
+                <div class="tabs" id="productTabs">
+                    <button class="tab tab--active" data-filter="tops">Tops</button>
+                    <button class="tab" data-filter="leggings">Leggings</button>
+                    <button class="tab" data-filter="shorts">Shorts</button>
+                    <button class="tab" data-filter="conjuntos">Conjuntos</button>
+                </div>
+
+                <div class="product-grid" id="productGrid">
+
+                    <article class="product-card" data-category="tops">
+                        <span class="product-card__badge">Novo</span>
+                        <div class="product-card__media">
+                            <img src="https://picsum.photos/seed/hynora1/600/750" alt="Top Origin Core — Stealth"
+                                loading="lazy">
+                        </div>
+                        <h3 class="product-card__name">Top Origin Core — Stealth</h3>
+                        <p class="product-card__price">Consulte o valor</p>
+                        <a href="#" class="link-underline">Ver detalhes</a>
+                    </article>
+
+                    <article class="product-card" data-category="tops">
+                        <div class="product-card__media">
+                            <img src="https://picsum.photos/seed/hynora2/600/750" alt="Top Origin Asym — Stark"
+                                loading="lazy">
+                        </div>
+                        <h3 class="product-card__name">Top Origin Asym — Stark</h3>
+                        <p class="product-card__price">Consulte o valor</p>
+                        <a href="#" class="link-underline">Ver detalhes</a>
+                    </article>
+
+                    <article class="product-card" data-category="leggings">
+                        <div class="product-card__media">
+                            <img src="https://picsum.photos/seed/hynora3/600/750" alt="Legging Origin Form — Carbon"
+                                loading="lazy">
+                        </div>
+                        <h3 class="product-card__name">Legging Origin Form — Carbon</h3>
+                        <p class="product-card__price">Consulte o valor</p>
+                        <a href="#" class="link-underline">Ver detalhes</a>
+                    </article>
+
+                    <article class="product-card" data-category="shorts">
+                        <div class="product-card__media">
+                            <img src="https://picsum.photos/seed/hynora4/600/750" alt="Short Origin Velocity — Void"
+                                loading="lazy">
+                        </div>
+                        <h3 class="product-card__name">Short Origin Velocity — Void</h3>
+                        <p class="product-card__price">Consulte o valor</p>
+                        <a href="#" class="link-underline">Ver detalhes</a>
+                    </article>
+
+                </div>
+
+                <p class="empty-state" id="emptyState" hidden>Em breve novas peças nesta categoria.</p>
+
+                <div class="collection__footer">
+                    <a href="#colecao" class="btn btn--outline">Ver Coleção Completa</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- CTA em destaque -->
+        <section class="cta-band">
+            <h2 class="cta-band__title">
+                <span>SEU RITMO.</span>
+                <span>SEU ESTILO.</span>
+                <span>SEU MOVIMENTO.</span>
+            </h2>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ===================== BENEFÍCIOS ===================== -->
+        <section class="benefits" id="beneficios">
+            <div class="container">
+                <h2 class="section-title">Engenharia do Movimento</h2>
+                <p class="section-subtitle">
+                    Desenvolvido com precisão milimétrica para potencializar sua performance.
+                    A tecnologia veste a forma.
+                </p>
+
+                <div class="benefits__grid">
+                    <div class="benefit-card">
+                        <span class="material-symbols-outlined benefit-card__icon">architecture</span>
+                        <h3 class="benefit-card__title">Design de Vanguarda</h3>
+                        <p class="benefit-card__desc">
+                            Cortes assimétricos e modelagem estrutural que desafiam o padrão.
+                            Estética implacável que transita do treino intenso para as ruas com autoridade.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="material-symbols-outlined benefit-card__icon">bolt</span>
+                        <h3 class="benefit-card__title">Performance Urbana</h3>
+                        <p class="benefit-card__desc">
+                            Tecidos tecnológicos de alta compressão e respirabilidade.
+                            Secagem rápida e resistência à abrasão para os treinos mais agressivos.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="material-symbols-outlined benefit-card__icon">tune</span>
+                        <h3 class="benefit-card__title">Curadoria de Estilo</h3>
+                        <p class="benefit-card__desc">
+                            Paleta de cores restrita e acabamentos minimalistas.
+                            Peças desenhadas para compor um guarda-roupa coeso de alta performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ===================== FAQ ===================== -->
+        <section class="faq" id="faq">
+            <div class="container faq__inner">
+                <h2 class="section-title">Dúvidas Frequentes</h2>
+
+                <div class="accordion" id="accordion">
+
+                    <div class="accordion__item">
+                        <button class="accordion__trigger" aria-expanded="false">
+                            <span>Quais produtos a Hynora Fitwear oferece?</span>
+                            <span class="material-symbols-outlined accordion__icon">add</span>
+                        </button>
+                        <div class="accordion__panel">
+                            <p>As categorias e produtos devem ser confirmados pela marca. O design utiliza uma estrutura
+                                demonstrativa para moda fitness e activewear.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <button class="accordion__trigger" aria-expanded="false">
+                            <span>Onde posso ver a coleção?</span>
+                            <span class="material-symbols-outlined accordion__icon">add</span>
+                        </button>
+                        <div class="accordion__panel">
+                            <p>A coleção deve ser apresentada na própria página, com imagens e informações oficiais
+                                inseridas após confirmação.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <button class="accordion__trigger" aria-expanded="false">
+                            <span>Como saber os preços?</span>
+                            <span class="material-symbols-outlined accordion__icon">add</span>
+                        </button>
+                        <div class="accordion__panel">
+                            <p>Os preços não foram encontrados. Utilize "Consulte o valor" até que os valores oficiais
+                                sejam fornecidos.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <button class="accordion__trigger" aria-expanded="false">
+                            <span>A marca entrega para todo o Brasil?</span>
+                            <span class="material-symbols-outlined accordion__icon">add</span>
+                        </button>
+                        <div class="accordion__panel">
+                            <p>Informação não localizada. Confirmar regiões, formas e prazos de entrega com a marca.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer" id="contato">
+        <div class="container footer__grid">
+
+            <div class="footer__brand">
+                <span class="logo logo--footer">HYNORA</span>
+                <p class="footer__copy">© <span id="currentYear"></span> HYNORA FITWEAR.</p>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__heading">Navegação</h4>
+                <ul class="footer__list">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#colecao">Coleção</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__heading">Suporte</h4>
+                <ul class="footer__list">
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__heading">Social</h4>
+                <ul class="footer__list">
+                    <li>
+                        <a href="https://www.instagram.com/hynora.fitwear/" target="_blank" rel="noopener">
+                            Instagram
+                            <span class="material-symbols-outlined footer__ext-icon">open_in_new</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer__bottom">
+            <span class="footer__copy">Feito com ❤️ por <a
+                    href="https://diegofranciscodasilva.github.io/dev-software-web/" target="_blank"
+                    rel="noopener noreferrer">dev.software.web &#169;</a></span>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante: volta ao topo, com pulso infinito em Electric Volt -->
+    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -36,15 +36,11 @@
 
     <meta name="theme-color" content="#0a0a0a">
 
-    <link rel="icon" href="./assets/images/fitness.png" type="image/png">
+    <link rel="icon" href="./assets/images/favicon.jpg" type="image/jpeg">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=block">
 
     <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -57,7 +53,7 @@
         <div class="header__inner container">
             <a href="#inicio" class="logo">HYNORA</a>
 
-            <nav class="nav" id="mainNav">
+            <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="#inicio" class="nav__link" data-nav-link data-section="inicio">Início</a></li>
                     <li><a href="#sobre" class="nav__link" data-nav-link data-section="sobre">Sobre</a></li>
@@ -173,21 +169,49 @@
                 </div>
 
                 <div class="manifesto__text">
-                    <span class="section-label">O Manifesto</span>
-                    <h2 class="headline-md">A Hynora Fitwear</h2>
+                    <span class="section-label">Quem Somos</span>
+                    <h2 class="headline-md">Hynora Fitwear</h2>
 
                     <p class="body-lg">
-                        Nós rejeitamos o ornamento. Rejeitamos o ruído visual. Na Hynora, acreditamos
-                        que a verdadeira performance exige clareza absoluta. Cada costura, cada painel
-                        de tecido é projetado com propósito singular: potencializar o seu movimento.
+                        Nascemos para conectar tecnologia têxtil de vanguarda e estética arquitetônica à rotina da
+                        mulher
+                        contemporânea. Nossas criações equilibram sustentação, conforto milimétrico e elegância
+                        implacável para acompanhar cada movimento com autoridade.
                     </p>
 
-                    <p class="body-lg">
-                        Nossa estética é a da <span class="strong">Cinética Minimalista</span> — agressiva, estruturada
-                        e implacavelmente precisa. Criamos para aqueles que encaram o treino não como um
-                        hobby, mas como um ritual de lapidação pessoal.
-                    </p>
+                    <div class="manifesto__features">
+                        <div class="manifesto__feature">
+                            <span class="material-symbols-outlined manifesto__feature-icon">explore</span>
+                            <h3 class="manifesto__feature-title">Missão</h3>
+                            <p class="manifesto__feature-desc">Inspirar mulheres em todas as suas idades e fases a se
+                                sentirem fortes, confiantes e determinadas.</p>
+                        </div>
 
+                        <div class="manifesto__feature">
+                            <span class="material-symbols-outlined manifesto__feature-icon">diamond</span>
+                            <h3 class="manifesto__feature-title">Valores</h3>
+                            <p class="manifesto__feature-desc">Força, confiança, autenticidade e evolução constante.</p>
+                        </div>
+
+                        <div class="manifesto__feature">
+                            <span class="material-symbols-outlined manifesto__feature-icon">verified</span>
+                            <h3 class="manifesto__feature-title">Qualidade</h3>
+                            <p class="manifesto__feature-desc">Tecidos tecnológicos que unem conforto, durabilidade e
+                                estilo.</p>
+                        </div>
+
+                        <div class="manifesto__feature">
+                            <span class="material-symbols-outlined manifesto__feature-icon">speed</span>
+                            <h3 class="manifesto__feature-title">Performance</h3>
+                            <p class="manifesto__feature-desc">Peças desenvolvidas para elevar o seu melhor desempenho.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="manifesto__cta">
+                        <a href="#colecao" class="btn btn-primary">Conhecer Coleção</a>
+                        <span class="manifesto__cta-label">FORÇA • CONFIANÇA • PERFORMANCE</span>
+                    </div>
                 </div>
 
             </div>
@@ -207,16 +231,16 @@
         <!-- ===================== COLEÇÃO ORIGIN ===================== -->
         <section class="collection" id="colecao">
             <div class="container">
-                <h2 class="section-title section-title--accent">Coleção Origin</h2>
+                <h2 class="section-title section-title--accent">Origin - Coleção Feminina</h2>
 
-                <div class="tabs" id="productTabs">
+                <div class="tabs">
                     <button class="tab tab--active" data-filter="tops">Tops</button>
                     <button class="tab" data-filter="leggings">Leggings</button>
                     <button class="tab" data-filter="shorts">Shorts</button>
                     <button class="tab" data-filter="conjuntos">Conjuntos</button>
                 </div>
 
-                <div class="product-grid" id="productGrid">
+                <div class="product-grid">
 
                     <article class="product-card" data-category="tops">
                         <span class="product-card__badge">Novo</span>
@@ -261,7 +285,7 @@
 
                 </div>
 
-                <p class="empty-state" id="emptyState" hidden>Em breve novas peças nesta categoria.</p>
+                <p class="empty-state" hidden>Em breve novas peças nesta categoria.</p>
 
                 <div class="collection__footer">
                     <a href="#colecao" class="btn btn--outline">Ver Coleção Completa</a>
@@ -269,55 +293,112 @@
             </div>
         </section>
 
-        <div class="section-divider"></div>
+        <section class="collection collection--masculina" id="colecao-masculina">
+            <div class="container">
+                <h2 class="section-title section-title--accent">Origin - Coleção Masculina</h2>
 
-        <!-- CTA em destaque -->
-        <section class="cta-band">
-            <h2 class="cta-band__title">
-                <span>SEU RITMO.</span>
-                <span>SEU ESTILO.</span>
-                <span>SEU MOVIMENTO.</span>
-            </h2>
+                <div class="tabs">
+                    <button class="tab tab--active" data-filter="camisetas">Camisetas</button>
+                    <button class="tab" data-filter="shorts-masculinos">Shorts</button>
+                    <button class="tab" data-filter="calcas">Calças</button>
+                    <button class="tab" data-filter="conjuntos-masculinos">Conjuntos</button>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card" data-category="camisetas">
+                        <span class="product-card__badge">Novo</span>
+                        <div class="product-card__media">
+                            <img src="https://picsum.photos/seed/hynoramen1/600/750" alt="Camiseta Origin Core — Black"
+                                loading="lazy">
+                        </div>
+                        <h3 class="product-card__name">Camiseta Origin Core — Black</h3>
+                        <p class="product-card__price">Consulte o valor</p>
+                        <a href="#colecao-masculina" class="link-underline">Ver detalhes</a>
+                    </article>
+
+                    <article class="product-card" data-category="shorts-masculinos">
+                        <div class="product-card__media">
+                            <img src="https://picsum.photos/seed/hynoramen2/600/750"
+                                alt="Short Origin Velocity — Graphite" loading="lazy">
+                        </div>
+                        <h3 class="product-card__name">Short Origin Velocity — Graphite</h3>
+                        <p class="product-card__price">Consulte o valor</p>
+                        <a href="#colecao-masculina" class="link-underline">Ver detalhes</a>
+                    </article>
+
+                    <article class="product-card" data-category="calcas">
+                        <div class="product-card__media">
+                            <img src="https://picsum.photos/seed/hynoramen3/600/750" alt="Calça Origin Form — Carbon"
+                                loading="lazy">
+                        </div>
+                        <h3 class="product-card__name">Calça Origin Form — Carbon</h3>
+                        <p class="product-card__price">Consulte o valor</p>
+                        <a href="#colecao-masculina" class="link-underline">Ver detalhes</a>
+                    </article>
+
+                    <article class="product-card" data-category="conjuntos-masculinos">
+                        <div class="product-card__media">
+                            <img src="https://picsum.photos/seed/hynoramen4/600/750" alt="Conjunto Origin System — Void"
+                                loading="lazy">
+                        </div>
+                        <h3 class="product-card__name">Conjunto Origin System — Void</h3>
+                        <p class="product-card__price">Consulte o valor</p>
+                        <a href="#colecao-masculina" class="link-underline">Ver detalhes</a>
+                    </article>
+                </div>
+
+                <p class="empty-state" hidden>Em breve novas peças nesta categoria.</p>
+
+                <div class="collection__footer">
+                    <a href="#colecao-masculina" class="btn btn--outline">Ver Coleção Completa</a>
+                </div>
+            </div>
         </section>
 
         <div class="section-divider"></div>
 
-        <!-- ===================== BENEFÍCIOS ===================== -->
+        <!-- ================= CTA BAND ================= -->
+        <section class="cta-band">
+            <span class="tag-dot cta-band__tag">FORÇA • CONFIANÇA • PERFORMANCE</span>
+            <h2 class="cta-band__title">Confiança que veste.<br>Força que transforma.</h2>
+            <p class="cta-band__subtitle">Vista a sua melhor versão</p>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ================= BENEFÍCIOS ================= -->
         <section class="benefits" id="beneficios">
-            <div class="container">
-                <h2 class="section-title">Engenharia do Movimento</h2>
-                <p class="section-subtitle">
-                    Desenvolvido com precisão milimétrica para potencializar sua performance.
-                    A tecnologia veste a forma.
-                </p>
+            <span class="tag-dot">FORÇA • CONFIANÇA • PERFORMANCE</span>
+            <h2 class="section-title">Tecnologia e Benefícios</h2>
+            <p class="section-subtitle">Cada detalhe desenvolvido para entregar o melhor para você.</p>
 
-                <div class="benefits__grid">
-                    <div class="benefit-card">
-                        <span class="material-symbols-outlined benefit-card__icon">architecture</span>
-                        <h3 class="benefit-card__title">Design de Vanguarda</h3>
-                        <p class="benefit-card__desc">
-                            Cortes assimétricos e modelagem estrutural que desafiam o padrão.
-                            Estética implacável que transita do treino intenso para as ruas com autoridade.
-                        </p>
-                    </div>
+            <div class="benefits__grid">
+                <div class="benefit-card">
+                    <span class="material-symbols-outlined benefit-card__icon">fitbit</span>
+                    <h3 class="benefit-card__title">Compressão na Medida Certa</h3>
+                    <p class="benefit-card__desc">Estrutura de compressão anatômica com suporte muscular estratégico que
+                        firma o corpo sem prender os movimentos.</p>
+                </div>
 
-                    <div class="benefit-card">
-                        <span class="material-symbols-outlined benefit-card__icon">bolt</span>
-                        <h3 class="benefit-card__title">Performance Urbana</h3>
-                        <p class="benefit-card__desc">
-                            Tecidos tecnológicos de alta compressão e respirabilidade.
-                            Secagem rápida e resistência à abrasão para os treinos mais agressivos.
-                        </p>
-                    </div>
+                <div class="benefit-card">
+                    <span class="material-symbols-outlined benefit-card__icon">favorite</span>
+                    <h3 class="benefit-card__title">Conforto Que Dura o Dia Todo</h3>
+                    <p class="benefit-card__desc">Toque suave ultra-macio e costuras planas antifricção que acompanham
+                        sua rotina do treino aos compromissos urbanos.</p>
+                </div>
 
-                    <div class="benefit-card">
-                        <span class="material-symbols-outlined benefit-card__icon">tune</span>
-                        <h3 class="benefit-card__title">Curadoria de Estilo</h3>
-                        <p class="benefit-card__desc">
-                            Paleta de cores restrita e acabamentos minimalistas.
-                            Peças desenhadas para compor um guarda-roupa coeso de alta performance.
-                        </p>
-                    </div>
+                <div class="benefit-card">
+                    <span class="material-symbols-outlined benefit-card__icon">visibility_off</span>
+                    <h3 class="benefit-card__title">Não Fica Transparente</h3>
+                    <p class="benefit-card__desc">Tramagem de altíssima densidade à prova de agachamento (squat-proof),
+                        garantindo cobertura total e segurança absoluta.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="material-symbols-outlined benefit-card__icon">air</span>
+                    <h3 class="benefit-card__title">Secagem Rápida</h3>
+                    <p class="benefit-card__desc">Tecnologia hidrofílica de evaporação acelerada que mantém a pele
+                        fresca e seca mesmo sob máxima intensidade de esforço.</p>
                 </div>
             </div>
         </section>

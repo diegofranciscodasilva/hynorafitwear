@@ -48,7 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
         (entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    setActiveNav(entry.target.id)
+                    const sectionId = entry.target.id === 'colecao-masculina'
+                        ? 'colecao'
+                        : entry.target.id
+                    setActiveNav(sectionId)
                 }
             })
         },
@@ -63,25 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ---------- Filtro de produtos (Coleção Origin) ---------- */
-    const tabs = document.querySelectorAll('.tab')
-    const productCards = document.querySelectorAll('.product-card')
-    const emptyState = document.getElementById('emptyState')
+    const collections = document.querySelectorAll('.collection')
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const filter = tab.dataset.filter
+    collections.forEach(collection => {
+        const tabs = collection.querySelectorAll('.tab')
+        const productCards = collection.querySelectorAll('.product-card')
+        const emptyState = collection.querySelector('.empty-state')
 
-            tabs.forEach(t => t.classList.remove('tab--active'))
-            tab.classList.add('tab--active')
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const filter = tab.dataset.filter
 
-            let visibleCount = 0
-            productCards.forEach(card => {
-                const match = card.dataset.category === filter
-                card.style.display = match ? '' : 'none'
-                if (match) visibleCount++
+                tabs.forEach(t => t.classList.remove('tab--active'))
+                tab.classList.add('tab--active')
+
+                let visibleCount = 0
+                productCards.forEach(card => {
+                    const match = card.dataset.category === filter
+                    card.style.display = match ? '' : 'none'
+                    if (match) visibleCount++
+                })
+
+                emptyState.hidden = visibleCount > 0
             })
-
-            emptyState.hidden = visibleCount > 0
         })
     })
 

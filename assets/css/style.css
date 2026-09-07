@@ -2,6 +2,8 @@
    HYNORA FITWEAR — Kinetic Obsidian Design System
    ========================================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
 :root {
     --surface: #121414;
     --surface-lowest: #0d0e0f;
@@ -18,7 +20,8 @@
     --on-primary: #3d2f00;
     --primary-container: #f2ca50;
 
-    --font-display-accent: 'Playfair Display', serif;
+    --font-display-accent: 'Playfair', serif;
+    --font-display: 'Bebas Neue', sans-serif;
     --font-body: 'Manrope', sans-serif;
 
     --gutter: 24px;
@@ -87,7 +90,7 @@ ul {
 
 /* ---------- Tipografia utilitária ---------- */
 .headline-md {
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     font-weight: 800;
     font-size: clamp(26px, 5vw, 30px);
     letter-spacing: 0.03em;
@@ -96,17 +99,17 @@ ul {
 }
 
 .section-title {
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     font-weight: 800;
     font-size: clamp(28px, 5vw, 40px);
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: var(--on-surface);
+    color: var(--primary);
     margin-bottom: var(--stack-md);
 }
 
 .section-title--accent {
-    color: var(--electric-volt);
+    color: var(--primary);
 }
 
 .section-subtitle {
@@ -245,11 +248,11 @@ ul {
 }
 
 .logo {
-    font-family: var(--font-body);
-    font-size: 20px;
+    font-family: var(--font-display);
+    font-size: 40px;
     font-weight: 800;
     letter-spacing: 0.15em;
-    color: var(--on-surface);
+    color: var(--primary);
 }
 
 .nav__list {
@@ -426,6 +429,39 @@ ul {
     height: 6px;
     background: var(--electric-volt);
     border-radius: 50%;
+    animation: indicator-blink 2.4s ease-in-out infinite;
+}
+
+@keyframes indicator-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(242, 202, 80, 0);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.8);
+        box-shadow: 0 0 6px rgba(242, 202, 80, 0.45);
+    }
+}
+
+@keyframes indicator-blink-dark {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(13, 14, 15, 0);
+    }
+
+    50% {
+        opacity: 0.55;
+        transform: scale(0.8);
+        box-shadow: 0 0 6px rgba(13, 14, 15, 0.35);
+    }
 }
 
 .label-sys {
@@ -437,12 +473,12 @@ ul {
 }
 
 .hero__title {
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     font-weight: 800;
     font-size: clamp(38px, 7vw, 58px);
     line-height: 1.05;
     letter-spacing: -0.01em;
-    color: var(--on-surface);
+    color: var(--primary);
     text-transform: uppercase;
     margin-bottom: var(--stack-md);
     position: relative;
@@ -671,6 +707,96 @@ ul {
     max-width: 560px;
 }
 
+.manifesto__features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 32px 0;
+}
+
+.manifesto__feature {
+    min-width: 0;
+    aspect-ratio: 1;
+    padding: 20px 16px;
+    border: 1px solid var(--electric-volt);
+    background: var(--surface-container);
+}
+
+.manifesto__feature-icon {
+    display: block;
+    color: var(--electric-volt);
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.manifesto__feature-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    line-height: 1;
+    color: var(--on-surface);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.manifesto__feature-desc {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--on-surface-variant);
+}
+
+.manifesto__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.manifesto__cta .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 24px;
+    background: var(--electric-volt);
+    border: 1px solid var(--electric-volt);
+    color: var(--on-primary);
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.manifesto__cta .btn-primary:hover {
+    background: transparent;
+    color: var(--electric-volt);
+}
+
+.manifesto__cta-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border: 1px solid var(--outline-variant);
+    border-radius: 2px;
+    color: var(--on-surface-variant);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+}
+
+.manifesto__cta-label::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    flex: 0 0 6px;
+    background: var(--electric-volt);
+    border-radius: 50%;
+    animation: indicator-blink 2.4s ease-in-out infinite;
+}
+
+@media (max-width: 600px) {
+    .manifesto__features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* =========================================================
    FAIXA DE DESTAQUE
    ========================================================= */
@@ -681,7 +807,7 @@ ul {
 }
 
 .highlight-band__title {
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     font-weight: 800;
     font-size: clamp(26px, 5vw, 38px);
     letter-spacing: 0.01em;
@@ -835,10 +961,15 @@ ul {
    ========================================================= */
 .cta-band {
     position: relative;
-    padding: 120px 20px;
-    text-align: center;
-    background: var(--electric-volt);
     overflow: hidden;
+    width: 100%;
+    background-color: var(--electric-volt);
+    padding: 80px var(--margin-desktop);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .cta-band::before {
@@ -853,70 +984,123 @@ ul {
     pointer-events: none;
 }
 
+.cta-band__tag {
+    border: 1px solid var(--on-primary);
+    color: var(--on-primary);
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-band__tag::before {
+    background: var(--surface-lowest);
+    box-shadow: none;
+    animation-name: indicator-blink-dark;
+}
+
 .cta-band__title {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-family: var(--font-body);
+    z-index: 1;
+    font-family: var(--font-display);
+    font-size: 32px;
     font-weight: 800;
-    font-size: clamp(26px, 6vw, 44px);
-    letter-spacing: 0.02em;
-    color: var(--on-primary);
     text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    color: var(--on-primary);
 }
+
+.cta-band__subtitle {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--on-primary);
+}
+
+@media (max-width: 600px) {
+    .cta-band__title {
+        font-size: 24px;
+    }
+}
+
 
 /* =========================================================
    BENEFÍCIOS
    ========================================================= */
 .benefits {
-    padding: var(--section-gap) 0;
-    background: var(--surface);
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px var(--margin-desktop);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.benefits>.tag-dot {
+    margin-bottom: 24px;
 }
 
 .benefits__grid {
+    width: 100%;
+    margin-top: 64px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gutter);
-}
-
-@media (max-width: 900px) {
-    .benefits__grid {
-        grid-template-columns: 1fr;
-    }
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
 .benefit-card {
-    padding: 32px;
-    background: var(--surface-container-high);
-    border: 1px solid transparent;
-    transition: border-color 0.25s var(--ease);
+    background: var(--surface-container);
+    border: 1px solid var(--outline-variant);
+    padding: 32px 24px;
+    text-align: left;
+    transition: border-color 0.25s var(--ease), transform 0.25s var(--ease), background 0.25s var(--ease);
 }
 
 .benefit-card:hover {
     border-color: var(--electric-volt);
+    background: var(--surface-container-high);
+    transform: translateY(-6px);
 }
 
 .benefit-card__icon {
     font-size: 32px;
     color: var(--electric-volt);
     margin-bottom: 20px;
+    display: block;
 }
 
 .benefit-card__title {
-    font-family: var(--font-body);
-    font-weight: 700;
+    font-family: var(--font-display);
     font-size: 18px;
+    font-weight: 700;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--on-surface);
+    color: var(--primary);
     margin-bottom: 12px;
 }
 
 .benefit-card__desc {
-    color: var(--on-surface-variant);
-    font-size: 15px;
-    line-height: 1.6;
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--on-surface);
+}
+
+@media (max-width: 1024px) {
+    .benefits__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .benefits__grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* =========================================================
@@ -935,6 +1119,11 @@ ul {
     border-bottom: 1px solid var(--outline-variant);
 }
 
+.accordion__item span:not(.material-symbols-outlined) {
+    font-family: var(--font-display);
+    color: var(--on-surface);
+}
+
 .accordion__trigger {
     width: 100%;
     display: flex;
@@ -951,11 +1140,13 @@ ul {
     text-align: left;
 }
 
-.accordion__trigger:hover {
+.accordion__item span:not(.material-symbols-outlined):hover {
     color: var(--electric-volt);
 }
 
 .accordion__icon {
+    font-family: 'Material Symbols Outlined';
+    color: var(--on-surface);
     flex-shrink: 0;
     transition: transform 0.3s var(--ease);
 }
@@ -1001,15 +1192,9 @@ ul {
     }
 }
 
-@media (max-width: 480px) {
-    .footer__grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .logo--footer {
     display: block;
-    font-size: 28px;
+    font-size: 40px;
     margin-bottom: 16px;
 }
 

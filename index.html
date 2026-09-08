@@ -51,7 +51,7 @@
     <!-- ===================== HEADER ===================== -->
     <header class="header" id="header">
         <div class="header__inner container">
-            <a href="#inicio" class="logo">HYNORA</a>
+            <a href="#inicio" class="logo">HYNORA<span class="logo__sub">fitwear</span></a>
 
             <nav class="nav">
                 <ul class="nav__list">
@@ -64,7 +64,8 @@
                 </ul>
             </nav>
 
-            <a href="#" class="btn btn--primary btn--sm header__cta">Contato</a>
+            <a href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Hynora%20Fitwear%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+" class="btn btn--primary btn--sm header__cta" target="_blank" rel="noopener">Contato</a>
 
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -82,7 +83,8 @@
             </li>
             <li><a href="#faq" class="mobile-nav__link" data-nav-link data-section="faq">FAQ</a></li>
         </ul>
-        <a href="#" class="btn btn--primary mobile-nav__cta">Contato</a>
+        <a href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Hynora%20Fitwear%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+" class="btn btn--primary mobile-nav__cta" target="_blank" rel="noopener">Contato</a>
     </div>
 
     <main>
@@ -95,7 +97,7 @@
                     <span class="tag-dot">COLEÇÃO EXCLUSIVA // ED. LIMITADA</span>
                     <span class="label-sys">[ HYNORA SYSTEM 01 ]</span>
 
-                    <h1 class="hero__title">VISTA SUA<br>ESSÊNCIA</h1>
+                    <h1 class="hero__title">VISTA SUA <span>ESSÊNCIA</span></h1>
 
                     <p class="hero__desc">
                         Performance bruta e estética urbana impecável. A intersecção perfeita
@@ -231,7 +233,7 @@
         <!-- ===================== COLEÇÃO ORIGIN ===================== -->
         <section class="collection" id="colecao">
             <div class="container">
-                <h2 class="section-title section-title--accent">Origin - Coleção Feminina</h2>
+                <h2 class="section-title section-title--accent">Origins - Coleção Feminina</h2>
 
                 <div class="tabs">
                     <button class="tab tab--active" data-filter="tops">Tops</button>
@@ -250,7 +252,10 @@
                         </div>
                         <h3 class="product-card__name">Top Origin Core — Stealth</h3>
                         <p class="product-card__price">Consulte o valor</p>
-                        <a href="#" class="link-underline">Ver detalhes</a>
+                        <button type="button" class="link-underline js-product-details"
+                            data-desc="Top de compressão média com sustentação estruturada e tecido stealth fosco. Ideal para treinos de alta intensidade que exigem firmeza sem abrir mão do conforto.">
+                            Ver detalhes
+                        </button>
                     </article>
 
                     <article class="product-card" data-category="tops">
@@ -260,7 +265,10 @@
                         </div>
                         <h3 class="product-card__name">Top Origin Asym — Stark</h3>
                         <p class="product-card__price">Consulte o valor</p>
-                        <a href="#" class="link-underline">Ver detalhes</a>
+                        <button type="button" class="link-underline js-product-details" data-desc="Modelagem assimétrica de vanguarda com recortes
+                            estratégicos. Uma peça que transita do treino às ruas com autoridade estética.">
+                            Ver detalhes
+                        </button>
                     </article>
 
                     <article class="product-card" data-category="leggings">
@@ -270,7 +278,10 @@
                         </div>
                         <h3 class="product-card__name">Legging Origin Form — Carbon</h3>
                         <p class="product-card__price">Consulte o valor</p>
-                        <a href="#" class="link-underline">Ver detalhes</a>
+                        <button type="button" class="link-underline js-product-details"
+                            data-desc="Legging de compressão alta com tecnologia de suporte e acabamento matte. Perfeita para atividades físicas intensas e estilo de vida moderno.">
+                            Ver detalhes
+                        </button>
                     </article>
 
                     <article class="product-card" data-category="shorts">
@@ -280,7 +291,10 @@
                         </div>
                         <h3 class="product-card__name">Short Origin Velocity — Void</h3>
                         <p class="product-card__price">Consulte o valor</p>
-                        <a href="#" class="link-underline">Ver detalhes</a>
+                        <button type="button" class="link-underline js-product-details"
+                            data-desc="Short leve de alta performance com tecido respirável e liberdade total de movimento. Projetado para velocidade e explosão muscular.">
+                            Ver detalhes
+                        </button>
                     </article>
 
                 </div>
@@ -295,7 +309,7 @@
 
         <section class="collection collection--masculina" id="colecao-masculina">
             <div class="container">
-                <h2 class="section-title section-title--accent">Origin - Coleção Masculina</h2>
+                <h2 class="section-title section-title--accent">Origins - Coleção Masculina</h2>
 
                 <div class="tabs">
                     <button class="tab tab--active" data-filter="camisetas">Camisetas</button>
@@ -306,44 +320,64 @@
 
                 <div class="product-grid">
                     <article class="product-card" data-category="camisetas">
-                        <span class="product-card__badge">Novo</span>
+                        <span class="product-card__badge product-card__badge--soon">Em Breve</span>
+                        <!--<span class="product-card__badge">Novo</span>-->
                         <div class="product-card__media">
                             <img src="https://picsum.photos/seed/hynoramen1/600/750" alt="Camiseta Origin Core — Black"
                                 loading="lazy">
                         </div>
                         <h3 class="product-card__name">Camiseta Origin Core — Black</h3>
-                        <p class="product-card__price">Consulte o valor</p>
-                        <a href="#colecao-masculina" class="link-underline">Ver detalhes</a>
+                        <p class="product-card__price">Em breve disponível</p>
+                        <!--<button type="button" class="link-underline js-product-details"
+                            data-desc="Camiseta técnica de corte reto em tecido leve e respirável, com secagem rápida para treinos intensos e uso urbano.">
+                            Ver detalhes
+                        </button>-->
+                        <span class="link-underline link-underline--disabled">Em breve</span>
                     </article>
 
                     <article class="product-card" data-category="shorts-masculinos">
+                        <span class="product-card__badge product-card__badge--soon">Em Breve</span>
                         <div class="product-card__media">
                             <img src="https://picsum.photos/seed/hynoramen2/600/750"
                                 alt="Short Origin Velocity — Graphite" loading="lazy">
                         </div>
                         <h3 class="product-card__name">Short Origin Velocity — Graphite</h3>
-                        <p class="product-card__price">Consulte o valor</p>
-                        <a href="#colecao-masculina" class="link-underline">Ver detalhes</a>
+                        <p class="product-card__price">Em breve disponível</p>
+                        <!--<button type="button" class="link-underline js-product-details"
+                            data-desc="Short masculino de alta performance com forro interno e tecido de secagem rápida. Liberdade de movimento em qualquer treino.">
+                            Ver detalhes
+                        </button>-->
+                        <span class="link-underline link-underline--disabled">Em breve</span>
                     </article>
 
                     <article class="product-card" data-category="calcas">
+                        <span class="product-card__badge product-card__badge--soon">Em Breve</span>
                         <div class="product-card__media">
                             <img src="https://picsum.photos/seed/hynoramen3/600/750" alt="Calça Origin Form — Carbon"
                                 loading="lazy">
                         </div>
                         <h3 class="product-card__name">Calça Origin Form — Carbon</h3>
-                        <p class="product-card__price">Consulte o valor</p>
-                        <a href="#colecao-masculina" class="link-underline">Ver detalhes</a>
+                        <p class="product-card__price">Em breve disponível</p>
+                        <!--<button type="button" class="link-underline js-product-details"
+                            data-desc="Calça de compressão anatômica com tecido tecnológico que acompanha cada movimento, unindo estrutura e conforto.">
+                            Ver detalhes
+                        </button>-->
+                        <span class="link-underline link-underline--disabled">Em breve</span>
                     </article>
 
                     <article class="product-card" data-category="conjuntos-masculinos">
+                        <span class="product-card__badge product-card__badge--soon">Em Breve</span>
                         <div class="product-card__media">
                             <img src="https://picsum.photos/seed/hynoramen4/600/750" alt="Conjunto Origin System — Void"
                                 loading="lazy">
                         </div>
                         <h3 class="product-card__name">Conjunto Origin System — Void</h3>
-                        <p class="product-card__price">Consulte o valor</p>
-                        <a href="#colecao-masculina" class="link-underline">Ver detalhes</a>
+                        <p class="product-card__price">Em breve disponível</p>
+                        <!--<button type="button" class="link-underline js-product-details"
+                            data-desc="Conjunto completo em tecido de alta performance, com modelagem coesa entre as peças para máxima liberdade de movimento.">
+                            Ver detalhes
+                        </button>-->
+                        <span class="link-underline link-underline--disabled">Em breve</span>
                     </article>
                 </div>
 
@@ -418,30 +452,41 @@
                             <span class="material-symbols-outlined accordion__icon">add</span>
                         </button>
                         <div class="accordion__panel">
-                            <p>As categorias e produtos devem ser confirmados pela marca. O design utiliza uma estrutura
-                                demonstrativa para moda fitness e activewear.</p>
+                            <p>Nossa coleção Origin conta com linha feminina (tops, leggings, shorts e conjuntos) e
+                                linha
+                                masculina (camisetas, shorts, calças e conjuntos), todas em tecidos de alta performance.
+                                Fale com a gente pelo <a
+                                    href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20produtos%20da%20Hynora%20Fitwear."
+                                    target="_blank" rel="noopener">WhatsApp</a>
+                                para ver as peças disponíveis no momento.</p>
                         </div>
                     </div>
 
                     <div class="accordion__item">
                         <button class="accordion__trigger" aria-expanded="false">
-                            <span>Onde posso ver a coleção?</span>
+                            <span>Onde posso ver a coleção completa?</span>
                             <span class="material-symbols-outlined accordion__icon">add</span>
                         </button>
                         <div class="accordion__panel">
-                            <p>A coleção deve ser apresentada na própria página, com imagens e informações oficiais
-                                inseridas após confirmação.</p>
+                            <p>As peças em destaque estão aqui na página, mas o catálogo completo, com mais fotos e
+                                opções de
+                                tecido, é apresentado diretamente pelo <a
+                                    href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Gostaria%20de%20ver%20o%20cat%C3%A1logo%20completo%20da%20Hynora%20Fitwear."
+                                    target="_blank" rel="noopener">WhatsApp</a>.</p>
                         </div>
                     </div>
 
                     <div class="accordion__item">
                         <button class="accordion__trigger" aria-expanded="false">
-                            <span>Como saber os preços?</span>
+                            <span>Como funciona a compra e como sei o preço?</span>
                             <span class="material-symbols-outlined accordion__icon">add</span>
                         </button>
                         <div class="accordion__panel">
-                            <p>Os preços não foram encontrados. Utilize "Consulte o valor" até que os valores oficiais
-                                sejam fornecidos.</p>
+                            <p>Nossas vendas são feitas 100% via WhatsApp. Basta clicar em "Ver Detalhes" no produto de
+                                interesse e
+                                depois em "Consultar via WhatsApp" — nossa equipe responde com valor, tamanhos
+                                disponíveis e formas
+                                de pagamento.</p>
                         </div>
                     </div>
 
@@ -451,7 +496,25 @@
                             <span class="material-symbols-outlined accordion__icon">add</span>
                         </button>
                         <div class="accordion__panel">
-                            <p>Informação não localizada. Confirmar regiões, formas e prazos de entrega com a marca.</p>
+                            <p>Sim! Realizamos entregas para todo o Brasil. O prazo e o valor do frete são calculados de
+                                acordo
+                                com a sua região — confirme diretamente pelo <a
+                                    href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20entrega%20e%20frete."
+                                    target="_blank" rel="noopener">WhatsApp</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <button class="accordion__trigger" aria-expanded="false">
+                            <span>Como faço para comprar?</span>
+                            <span class="material-symbols-outlined accordion__icon">add</span>
+                        </button>
+                        <div class="accordion__panel">
+                            <p>É simples: escolha a peça na Coleção Origin, clique em "Ver Detalhes" e depois em
+                                "Consultar via
+                                WhatsApp", ou fale diretamente pelo botão "Contato" no menu. Nossa equipe finaliza o
+                                pedido com
+                                você pela conversa.</p>
                         </div>
                     </div>
 
@@ -466,7 +529,9 @@
         <div class="container footer__grid">
 
             <div class="footer__brand">
-                <span class="logo logo--footer">HYNORA</span>
+                <span class="logo logo--footer">HYNORA
+                    <span class="logo__sub">fitwear</span>
+                </span>
                 <p class="footer__copy">© <span id="currentYear"></span> HYNORA FITWEAR.</p>
             </div>
 
@@ -484,7 +549,8 @@
                 <ul class="footer__list">
                     <li><a href="#beneficios">Benefícios</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Hynora%20Fitwear%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+" target="_blank" rel="noopener">Contato</a></li>
                 </ul>
             </div>
 
@@ -507,6 +573,43 @@
                     rel="noopener noreferrer">dev.software.web &#169;</a></span>
         </div>
     </footer>
+
+    <div class="product-modal" id="productModal" aria-hidden="true">
+        <div class="product-modal__backdrop" data-modal-close></div>
+        <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+            <button type="button" class="product-modal__close" aria-label="Fechar" data-modal-close>
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <div class="product-modal__grid">
+                <div class="product-modal__media">
+                    <img src="" alt="" class="product-modal__img" id="productModalImg">
+                </div>
+
+                <div class="product-modal__content">
+                    <span class="tag-dot" id="productModalCategory">CATEGORIA</span>
+                    <h2 class="product-modal__title" id="productModalTitle"></h2>
+                    <p class="product-modal__price">Consulte o valor</p>
+                    <p class="product-modal__desc" id="productModalDesc"></p>
+
+                    <div class="product-modal__sizes">
+                        <span class="product-modal__sizes-label">Tamanho</span>
+                        <div class="product-modal__size-list">
+                            <button type="button" class="size-chip">P</button>
+                            <button type="button" class="size-chip">M</button>
+                            <button type="button" class="size-chip">G</button>
+                            <button type="button" class="size-chip">GG</button>
+                        </div>
+                    </div>
+
+                    <a href="#" id="productModalWhatsapp" class="btn btn--primary" target="_blank" rel="noopener">
+                        <span class="material-symbols-outlined">chat</span>
+                        Consultar via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Botão flutuante: volta ao topo, com pulso infinito em Electric Volt -->
     <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">

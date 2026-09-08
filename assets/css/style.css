@@ -1,5 +1,5 @@
 /* =========================================================
-   HYNORA FITWEAR — Kinetic Obsidian Design System
+   DESIGN — **Brutalism** with **Kinetic Minimalism**
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
@@ -34,7 +34,9 @@
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ---------- Reset básico ---------- */
+/* =========================================================
+   RESET BÁSICO
+   ========================================================= */
 * {
     margin: 0;
     padding: 0;
@@ -88,11 +90,13 @@ ul {
     }
 }
 
-/* ---------- Tipografia utilitária ---------- */
+/* =========================================================
+   TIPOGRAFIA E UTILITÁRIOS
+   ========================================================= */
 .headline-md {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(26px, 5vw, 30px);
+    font-size: clamp(40px, 8vw, 38px);
     letter-spacing: 0.03em;
     color: var(--primary);
     text-transform: uppercase;
@@ -101,7 +105,7 @@ ul {
 .section-title {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(28px, 5vw, 40px);
+    font-size: clamp(32px, 6vw, 46px);
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: var(--primary);
@@ -204,7 +208,6 @@ ul {
     font-size: 12px;
 }
 
-
 /* =========================================================
    SPAN UTILITÁRIO
    ========================================================= */
@@ -253,6 +256,25 @@ ul {
     font-weight: 800;
     letter-spacing: 0.15em;
     color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo__sub {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--on-surface-variant);
+}
+
+.logo--footer .logo__sub {
+    margin-top: 2px;
+    color: var(--outline);
+    width: fit-content;
 }
 
 .nav__list {
@@ -260,7 +282,9 @@ ul {
     gap: 32px;
 }
 
-/* Link de navegação: cor + faixa inferior ativam via clique OU scroll spy (JS) */
+/* =========================================================
+   LINKS DE NAVEGAÇÃO
+   ========================================================= */
 .nav__link {
     position: relative;
     font-size: 14px;
@@ -475,7 +499,7 @@ ul {
 .hero__title {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(38px, 7vw, 58px);
+    font-size: clamp(44px, 8vw, 68px);
     line-height: 1.05;
     letter-spacing: -0.01em;
     color: var(--primary);
@@ -493,6 +517,10 @@ ul {
     width: 80px;
     height: 4px;
     background: var(--electric-volt);
+}
+
+.hero__title span {
+    color: var(--primary-container);
 }
 
 .hero__desc {
@@ -540,14 +568,17 @@ ul {
     gap: 16px;
 }
 
-/* Container geral do Hero (imagem + biometric-cards) */
+/* =========================================================
+   CONTAINER HERO (IMAGEM + BIOMETRIC-CARDS)
+   ========================================================= */
 .hero__media {
     position: relative;
     width: 100%;
 }
 
-/* Novo wrapper: concentra apenas a imagem e os elementos que ficam sobre ela
-   (frame-label e chip). O bottom-left passa a se ancorar só a esta área. */
+/* =========================================================
+   WRAPPER HERO (IMAGEM + BIOMETRIC-CARDS)
+   ========================================================= */
 .hero__media-frame {
     position: relative;
     width: 100%;
@@ -607,8 +638,9 @@ ul {
     box-shadow: 0 0 12px var(--electric-volt);
 }
 
-/* Biometric-cards: no desktop continuam flutuando sobre a imagem;
-   em telas <=480px, viram itens estáticos empilhados abaixo dela */
+/* =========================================================
+   BIOMETRIC-CARDS
+   ========================================================= */
 .biometric-card {
     position: absolute;
     display: flex;
@@ -709,37 +741,43 @@ ul {
 
 .manifesto__features {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin: 32px 0;
 }
 
 .manifesto__feature {
     min-width: 0;
-    aspect-ratio: 1;
-    padding: 20px 16px;
+    padding: 16px;
     border: 1px solid var(--electric-volt);
     background: var(--surface-container);
+    transition: border-color 0.25s var(--ease), transform 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.manifesto__feature:hover {
+    border-color: var(--primary);
+    background: var(--surface-container-high);
+    transform: translateY(-6px);
 }
 
 .manifesto__feature-icon {
     display: block;
     color: var(--electric-volt);
-    font-size: 26px;
-    margin-bottom: 12px;
+    font-size: 20px;
+    margin-bottom: 8px;
 }
 
 .manifesto__feature-title {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1;
     color: var(--on-surface);
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .manifesto__feature-desc {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.4;
     color: var(--on-surface-variant);
 }
@@ -809,7 +847,7 @@ ul {
 .highlight-band__title {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(26px, 5vw, 38px);
+    font-size: clamp(30px, 6vw, 44px);
     letter-spacing: 0.01em;
     color: var(--on-surface);
     text-transform: uppercase;
@@ -957,7 +995,23 @@ ul {
 }
 
 /* =========================================================
-   CTA BAND
+   LINKS DESABILITADOS
+   ========================================================= */
+.product-card__badge--soon {
+    background: var(--surface-container-high);
+    color: var(--outline);
+    border: 1px solid var(--outline-variant);
+}
+
+.link-underline--disabled {
+    color: var(--outline);
+    border-bottom-color: var(--outline-variant);
+    cursor: default;
+    pointer-events: none;
+}
+
+/* =========================================================
+   CTA
    ========================================================= */
 .cta-band {
     position: relative;
@@ -1002,7 +1056,7 @@ ul {
     position: relative;
     z-index: 1;
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.02em;
@@ -1014,7 +1068,7 @@ ul {
     position: relative;
     z-index: 1;
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -1023,10 +1077,9 @@ ul {
 
 @media (max-width: 600px) {
     .cta-band__title {
-        font-size: 24px;
+        font-size: 28px;
     }
 }
-
 
 /* =========================================================
    BENEFÍCIOS
@@ -1133,7 +1186,7 @@ ul {
     padding: 28px 0;
     font-family: var(--font-body);
     font-weight: 700;
-    font-size: clamp(15px, 2.5vw, 17px);
+    font-size: clamp(17px, 3vw, 20px);
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--on-surface);
@@ -1152,7 +1205,7 @@ ul {
 }
 
 .accordion__trigger[aria-expanded="true"] .accordion__icon {
-    transform: rotate(45deg);
+    transform: rotate(0deg);
 }
 
 .accordion__panel {
@@ -1170,6 +1223,33 @@ ul {
     font-weight: 400;
 }
 
+.accordion__panel p a {
+    color: var(--electric-volt);
+    font-weight: 700;
+    border-bottom: 1px solid var(--electric-volt);
+    padding-bottom: 1px;
+    transition: opacity 0.2s var(--ease);
+}
+
+.accordion__panel p a:hover {
+    opacity: 0.7;
+}
+
+/* =========================================================
+   TEXTOS CENTRADOS - Benefits e FAQ
+   ========================================================= */
+
+.benefits .section-title,
+.benefits .section-subtitle,
+.faq .section-title {
+    text-align: center;
+}
+
+.benefits .section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -1185,7 +1265,6 @@ ul {
     gap: 40px;
 }
 
-/* Em telas <= 768px, as colunas do footer ficam empilhadas verticalmente */
 @media (max-width: 768px) {
     .footer__grid {
         grid-template-columns: 1fr;
@@ -1258,18 +1337,217 @@ ul {
 }
 
 /* =========================================================
-   TEXTOS CENTRADOS - Benefits e FAQ
+   PRODUCT MODAL
    ========================================================= */
-
-.benefits .section-title,
-.benefits .section-subtitle,
-.faq .section-title {
-    text-align: center;
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s var(--ease), visibility 0.3s var(--ease);
 }
 
-.benefits .section-subtitle {
-    margin-left: auto;
-    margin-right: auto;
+.product-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 14, 15, 0.85);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.product-modal__dialog {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 880px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--surface-container-high);
+    border: 1px solid var(--outline-variant);
+    transform: scale(0.96);
+    transition: transform 0.3s var(--ease);
+}
+
+.product-modal.is-open .product-modal__dialog {
+    transform: scale(1);
+}
+
+.product-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-lowest);
+    border: 1px solid var(--outline-variant);
+    color: var(--on-surface);
+    transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.product-modal__close:hover {
+    border-color: var(--electric-volt);
+    color: var(--electric-volt);
+}
+
+.product-modal__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .product-modal__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product-modal__media {
+    aspect-ratio: 4 / 5;
+    background: var(--surface-container-low);
+    overflow: hidden;
+}
+
+.product-modal__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-modal__content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product-modal__title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(24px, 4vw, 32px);
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.product-modal__price {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+}
+
+.product-modal__desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--on-surface);
+    margin: 8px 0;
+}
+
+.product-modal__sizes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.product-modal__sizes-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--outline);
+}
+
+.product-modal__size-list {
+    display: flex;
+    gap: 10px;
+}
+
+.size-chip {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--outline-variant);
+    color: var(--on-surface);
+    font-size: 13px;
+    font-weight: 700;
+    transition: border-color 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.size-chip:hover,
+.size-chip.is-selected {
+    border-color: var(--electric-volt);
+    background: var(--electric-volt);
+    color: var(--on-primary);
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .product-modal {
+        padding: 0;
+    }
+
+    .product-modal__dialog {
+        max-width: 100%;
+        max-height: 100vh;
+        height: 100%;
+        border: none;
+    }
+
+    .product-modal__close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .product-modal__media {
+        aspect-ratio: 1 / 1;
+    }
+
+    .product-modal__content {
+        padding: 28px 20px 32px;
+        gap: 10px;
+    }
+
+    .product-modal__title {
+        font-size: 22px;
+    }
+
+    .product-modal__desc {
+        font-size: 14px;
+    }
+
+    .product-modal__sizes {
+        margin-bottom: 4px;
+    }
+
+    .size-chip {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .product-modal__content .btn--primary {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* =========================================================
@@ -1290,13 +1568,11 @@ ul {
     color: var(--on-primary);
     border: 1px solid var(--electric-volt);
     cursor: pointer;
-
     /* Estado oculto por padrão; visível via JS ao rolar a página */
     opacity: 0;
     visibility: hidden;
     transform: translateY(12px);
     transition: opacity 0.3s var(--ease), visibility 0.3s var(--ease), transform 0.3s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
-
     animation: pulse-glow 2.4s ease-in-out infinite;
 }
 
@@ -1315,7 +1591,9 @@ ul {
     font-size: 24px;
 }
 
-/* Pulso infinito: expande o glow e volta, sugerindo energia contínua */
+/* =========================================================
+   PULSO INFINITO (KINETIC SHADOW)
+   ========================================================= */
 @keyframes pulse-glow {
 
     0%,

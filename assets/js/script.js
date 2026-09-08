@@ -1,6 +1,63 @@
 /* =========================================================
-   HYNORA FITWEAR — Interações (menu, tabs, accordion, nav ativa, scroll-top)
+   INTERAÇÕES JS
    ========================================================= */
+/* ---------- Modal de detalhes do produto ---------- */
+const productModal = document.getElementById('productModal')
+const modalImg = document.getElementById('productModalImg')
+const modalTitle = document.getElementById('productModalTitle')
+const modalCategory = document.getElementById('productModalCategory')
+const modalDesc = document.getElementById('productModalDesc')
+const modalWhatsapp = document.getElementById('productModalWhatsapp')
+
+const WHATSAPP_NUMBER = 5519989291837 // ex: 5511999999999
+
+const openProductModal = (trigger) => {
+    const card = trigger.closest('.product-card')
+    const name = card.querySelector('.product-card__name').textContent.trim()
+    const img = card.querySelector('.product-card__media img')
+    const category = card.dataset.category || ''
+    const desc = trigger.dataset.desc || ''
+
+    modalImg.src = img.src
+    modalImg.alt = img.alt
+    modalTitle.textContent = name
+    modalCategory.textContent = category.toUpperCase()
+    modalDesc.textContent = desc
+
+    const message = encodeURIComponent(`Olá! Tenho interesse no produto "${name}" da Hynora Fitwear. Poderia me passar mais informações e o valor?`)
+    modalWhatsapp.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
+
+    productModal.classList.add('is-open')
+    productModal.setAttribute('aria-hidden', 'false')
+    document.body.classList.add('modal-open')
+}
+
+const closeProductModal = () => {
+    productModal.classList.remove('is-open')
+    productModal.setAttribute('aria-hidden', 'true')
+    document.body.classList.remove('modal-open')
+}
+
+document.querySelectorAll('.js-product-details').forEach(trigger => {
+    trigger.addEventListener('click', () => openProductModal(trigger))
+})
+
+document.querySelectorAll('[data-modal-close]').forEach(el => {
+    el.addEventListener('click', closeProductModal)
+})
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && productModal.classList.contains('is-open')) {
+        closeProductModal()
+    }
+})
+
+document.querySelectorAll('.size-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+        document.querySelectorAll('.size-chip').forEach(c => c.classList.remove('is-selected'))
+        chip.classList.add('is-selected')
+    })
+})
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -97,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     accordionTriggers.forEach(trigger => {
         const panel = trigger.nextElementSibling
+        const icon = trigger.querySelector('.accordion__icon')
 
         trigger.addEventListener('click', () => {
             const isOpen = trigger.getAttribute('aria-expanded') === 'true'
@@ -106,10 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     otherTrigger.setAttribute('aria-expanded', 'false');
                     otherTrigger.nextElementSibling.style.maxHeight = null
                     otherTrigger.nextElementSibling.style.opacity = 0
+                    otherTrigger.querySelector('.accordion__icon').textContent = 'add'
                 }
             })
 
             trigger.setAttribute('aria-expanded', String(!isOpen))
+            icon.textContent = isOpen ? 'add' : 'remove'
 
             if (!isOpen) {
                 panel.style.maxHeight = panel.scrollHeight + 'px'

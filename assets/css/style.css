@@ -96,7 +96,7 @@ ul {
 .headline-md {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(40px, 8vw, 38px);
+    font-size: clamp(30px, 6vw, 36px);
     letter-spacing: 0.03em;
     color: var(--primary);
     text-transform: uppercase;
@@ -829,12 +829,6 @@ ul {
     animation: indicator-blink 2.4s ease-in-out infinite;
 }
 
-@media (max-width: 600px) {
-    .manifesto__features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 /* =========================================================
    FAIXA DE DESTAQUE
    ========================================================= */
@@ -1087,11 +1081,17 @@ ul {
 .benefits {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 80px var(--margin-desktop);
+    padding: 80px var(--margin-mobile);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .benefits {
+        padding: 80px var(--margin-desktop);
+    }
 }
 
 .benefits>.tag-dot {
@@ -1202,10 +1202,6 @@ ul {
     color: var(--on-surface);
     flex-shrink: 0;
     transition: transform 0.3s var(--ease);
-}
-
-.accordion__trigger[aria-expanded="true"] .accordion__icon {
-    transform: rotate(0deg);
 }
 
 .accordion__panel {

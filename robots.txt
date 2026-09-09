@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hynorafitwear.vercel.app/sitemap.xml

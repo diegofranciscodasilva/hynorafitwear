@@ -47,9 +47,13 @@
 
     <meta name="theme-color" content="#0a0a0a">
 
-    <link rel="icon" href="./assets/images/favicon.jpg" type="image/png">
+    <link rel="icon" href="./assets/images/favicon.jpg" type="image/jpg">
     <link rel="apple-touch-icon" href="./assets/images/favicon.jpg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <script type="application/ld+json">
@@ -63,7 +67,7 @@
                 "url": "https://hynorafitwear.vercel.app/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://hynorafitwear.vercel.app/assets/images/favicon.png"
+                    "url": "https://hynorafitwear.vercel.app/assets/images/favicon.jpg"
                 },
                 "image": "https://hynorafitwear.vercel.app/assets/images/preview.png",
                 "description": "Marca de roupas fitness femininas e masculinas com foco em performance, conforto, tecnologia e estilo.",
@@ -121,10 +125,11 @@
                 </ul>
             </nav>
 
-            <a href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Hynora%20Fitwear%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
-" class="btn btn--primary btn--sm header__cta" target="_blank" rel="noopener">Contato</a>
+            <a href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Hynora%20Fitwear%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                class="btn btn--primary btn--sm header__cta" target="_blank" rel="noopener">Contato</a>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-controls="mobileNav"
+                aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -140,8 +145,8 @@
             </li>
             <li><a href="#faq" class="mobile-nav__link" data-nav-link data-section="faq">FAQ</a></li>
         </ul>
-        <a href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Hynora%20Fitwear%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
-" class="btn btn--primary mobile-nav__cta" target="_blank" rel="noopener">Contato</a>
+        <a href="https://wa.me/5519989291837?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Hynora%20Fitwear%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+            class="btn btn--primary mobile-nav__cta" target="_blank" rel="noopener">Contato</a>
     </div>
 
     <main>
@@ -504,11 +509,12 @@
                 <div class="accordion" id="accordion">
 
                     <div class="accordion__item">
-                        <button class="accordion__trigger" aria-expanded="false">
+                        <button class="accordion__trigger" id="faq-trigger-1" aria-expanded="false"
+                            aria-controls="faq-panel-1">
                             <span>Quais produtos a Hynora Fitwear oferece?</span>
                             <span class="material-symbols-outlined accordion__icon">add</span>
                         </button>
-                        <div class="accordion__panel">
+                        <div class="accordion__panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1">
                             <p>Nossa coleção Origin conta com linha feminina (tops, leggings, shorts e conjuntos) e
                                 linha
                                 masculina (camisetas, shorts, calças e conjuntos), todas em tecidos de alta performance.
@@ -520,11 +526,12 @@
                     </div>
 
                     <div class="accordion__item">
-                        <button class="accordion__trigger" aria-expanded="false">
+                        <button class="accordion__trigger" id="faq-trigger-2" aria-expanded="false"
+                            aria-controls="faq-panel-2">
                             <span>Onde posso ver a coleção completa?</span>
                             <span class="material-symbols-outlined accordion__icon">add</span>
                         </button>
-                        <div class="accordion__panel">
+                        <div class="accordion__panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2">
                             <p>As peças em destaque estão aqui na página, mas o catálogo completo, com mais fotos e
                                 opções de
                                 tecido, é apresentado diretamente pelo <a
@@ -534,11 +541,12 @@
                     </div>
 
                     <div class="accordion__item">
-                        <button class="accordion__trigger" aria-expanded="false">
+                        <button class="accordion__trigger" id="faq-trigger-3" aria-expanded="false"
+                            aria-controls="faq-panel-3">
                             <span>Como funciona a compra e como sei o preço?</span>
                             <span class="material-symbols-outlined accordion__icon">add</span>
                         </button>
-                        <div class="accordion__panel">
+                        <div class="accordion__panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3">
                             <p>Nossas vendas são feitas 100% via WhatsApp. Basta clicar em "Ver Detalhes" no produto de
                                 interesse e
                                 depois em "Consultar via WhatsApp" — nossa equipe responde com valor, tamanhos
@@ -548,11 +556,12 @@
                     </div>
 
                     <div class="accordion__item">
-                        <button class="accordion__trigger" aria-expanded="false">
+                        <button class="accordion__trigger" id="faq-trigger-4" aria-expanded="false"
+                            aria-controls="faq-panel-4">
                             <span>A marca entrega para todo o Brasil?</span>
                             <span class="material-symbols-outlined accordion__icon">add</span>
                         </button>
-                        <div class="accordion__panel">
+                        <div class="accordion__panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4">
                             <p>Sim! Realizamos entregas para todo o Brasil. O prazo e o valor do frete são calculados de
                                 acordo
                                 com a sua região — confirme diretamente pelo <a
@@ -562,11 +571,12 @@
                     </div>
 
                     <div class="accordion__item">
-                        <button class="accordion__trigger" aria-expanded="false">
+                        <button class="accordion__trigger" id="faq-trigger-5" aria-expanded="false"
+                            aria-controls="faq-panel-5">
                             <span>Como faço para comprar?</span>
                             <span class="material-symbols-outlined accordion__icon">add</span>
                         </button>
-                        <div class="accordion__panel">
+                        <div class="accordion__panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5">
                             <p>É simples: escolha a peça na Coleção Origin, clique em "Ver Detalhes" e depois em
                                 "Consultar via
                                 WhatsApp", ou fale diretamente pelo botão "Contato" no menu. Nossa equipe finaliza o
@@ -633,7 +643,8 @@
 
     <div class="product-modal" id="productModal" aria-hidden="true">
         <div class="product-modal__backdrop" data-modal-close></div>
-        <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+        <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="productModalTitle"
+            tabindex="-1">
             <button type="button" class="product-modal__close" aria-label="Fechar" data-modal-close>
                 <span class="material-symbols-outlined">close</span>
             </button>

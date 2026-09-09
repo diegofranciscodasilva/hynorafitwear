@@ -11,10 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCategory = document.getElementById('productModalCategory')
     const modalDesc = document.getElementById('productModalDesc')
     const modalWhatsapp = document.getElementById('productModalWhatsapp')
+    const modalClose = productModal.querySelector('.product-modal__close')
+    let lastFocusedElement = null
 
     const WHATSAPP_NUMBER = '5519989291837'
 
     const openProductModal = (trigger) => {
+        lastFocusedElement = document.activeElement
         const card = trigger.closest('.product-card')
         const name = card.querySelector('.product-card__name').textContent.trim()
         const img = card.querySelector('.product-card__media img')
@@ -33,12 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
         productModal.classList.add('is-open')
         productModal.setAttribute('aria-hidden', 'false')
         document.body.classList.add('modal-open')
+        modalClose.focus()
     }
 
     const closeProductModal = () => {
         productModal.classList.remove('is-open')
         productModal.setAttribute('aria-hidden', 'true')
         document.body.classList.remove('modal-open')
+        lastFocusedElement?.focus()
     }
 
     document.querySelectorAll('.js-product-details').forEach(trigger => {
@@ -69,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMobileNav = () => {
         menuToggle.classList.remove('is-active')
         mobileNav.classList.remove('is-open')
+        menuToggle.setAttribute('aria-label', 'Abrir menu')
         menuToggle.setAttribute('aria-expanded', 'false')
         document.body.style.overflow = ''
     }
@@ -76,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
         const isOpen = mobileNav.classList.toggle('is-open')
         menuToggle.classList.toggle('is-active', isOpen)
+        menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu')
         menuToggle.setAttribute('aria-expanded', String(isOpen))
         document.body.style.overflow = isOpen ? 'hidden' : ''
     })

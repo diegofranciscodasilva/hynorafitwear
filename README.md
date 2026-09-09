@@ -38,7 +38,9 @@ Landing page de moda fitness e activewear com estética urbana minimalista. O pr
 │   │   ├── favicon.jpg
 │   │   ├── fitness.png
 │   │   ├── homefoto.jpg
-│   │   ├── post.png
+│   │   ├── post1.png
+│   │   ├── post2.png
+│   │   ├── post3.png
 │   │   └── preview.png
 │   └── js/
 │       └── script.js
